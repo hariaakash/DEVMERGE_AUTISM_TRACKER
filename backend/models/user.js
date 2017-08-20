@@ -15,40 +15,16 @@ var userSchema = new Schema({
 		type: String,
 		required: true
 	},
-	data: [{
+	images: [{
 		time: {
 			type: Date,
 			default: Date.now
 		},
-		images: [{
-			url: String,
-			emotion: {
-				anger: Number,
-				disgust: Number,
-				fear: Number,
-				happiness: Number,
-				neutral: Number,
-				sadness: Number,
-				surprise: Number
-			}
-		}],
+		url: String,
+		emotion: [Number],
 		final: Number,
 		label: Number
 	}],
-	settings: [{
-		type: Number,
-		data: String
-	}],
-	count: {
-		images: {
-			type: Number,
-			default: 0
-		},
-		actions: {
-			type: Number,
-			default: 0
-		}
-	},
 	authKey: String
 });
 

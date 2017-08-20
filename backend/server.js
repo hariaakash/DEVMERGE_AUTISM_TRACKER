@@ -16,5 +16,5 @@ conf.MW(app, morgan, cors);
 conf.ROUTES(app);
 
 
-app.listen(conf.PORT, conf.IP);
+app.listen(conf.PORT);
 console.log('Server running on ' + conf.IP + ':' + conf.PORT);
